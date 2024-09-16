@@ -1,5 +1,5 @@
 ﻿aiosqlite==0.20.0
-guvicorn
+gunicorn
 alembic==1.13.2
 altgraph==0.17.4
 annotated-types==0.6.0
