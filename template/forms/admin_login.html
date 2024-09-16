@@ -1,0 +1,7 @@
+{% extends "tools/orm_form.html" %}
+
+{% block form_attibute %}
+{{ wtf.form_field(form.username)}}
+{{ wtf.form_field(form.password)}}
+{{ wtf.form_field(form.submit, class_='form-control btn btn-primary') }}
+{% endblock %}

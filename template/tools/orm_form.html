@@ -1,0 +1,38 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+    
+    <div class="container mt-5">
+
+        
+        
+
+        <div class="container">
+            
+
+            
+            <div class="row justify-content-center align-items-center"></div>
+            
+            <div class="col-11 col-md-6 ">
+                
+                
+                    {% block extra_fields %}
+                   
+                    {% endblock %}
+                    <h3 class="text-center">{{title}}</h3>
+                    {% include "tools/flash_message.html" %}
+  
+                    <form class="form"  method="post">
+                        {{ form.hidden_tag() }}
+                        {{ form.csrf_token }}
+                        {% block form_attibute %}                       
+                        {% endblock %} 
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    
+    
+
+{% endblock %}

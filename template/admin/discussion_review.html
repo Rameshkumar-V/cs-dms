@@ -1,0 +1,38 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+  <h2>{{ title }}</h2>
+  <div class="row">
+    <div class="col-md-12">
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Discussion ID</th>
+            <th>Total Remarks</th>
+            <th>Positive Remarks</th>
+            <th >Negative Remarks</th>
+            <th class="text-success">Success Percentage</th>
+            <th class="text-danger">Failure Percentage</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for remark in discussion_details %}
+          <tr>
+            <td>{{ remark.discussion_id }}</td>
+            <td>{{ remark.total }}</td>
+            <td>{{ remark.positive }}</td>
+            <td>{{ remark.negative }}</td>
+            <td class="text-success">{{ remark.success_percentage }}%</td>
+            <td class="text-danger">{{ remark.failure_percentage }}%</td>
+            <td class="{{ 'text-danger' if remark.result == 'POSITIVE' else 'text-success' }}">
+              {{ remark.result }}
+            </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

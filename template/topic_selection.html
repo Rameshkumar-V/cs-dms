@@ -1,0 +1,44 @@
+<!-- topic_selection.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic Selection</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Topic Selection</h1>
+        <div class="row">
+
+            {% if topics %}
+            
+           
+            {% for title in topics %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ title.get('title','Unavailable') }}</h5>
+
+                        <div class="
+                        d-flex flex-column bd-highlight 
+                        ">
+
+                        <a href="/disscusion/{{ title.get('id','None') }}" class="btn btn-primary">Select</a>
+                        <small class="font-weight-light text-right m-1">{{ title.get('created_date','None')}}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            {% else %}
+                <h4 class="text-center m-4">*No Topics Currently Available</h4>
+            
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

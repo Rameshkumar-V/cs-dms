@@ -1,0 +1,16 @@
+{% extends "tools/orm_form.html" %}
+
+
+
+{% block extra_fields %}
+<div>
+    <h5>Roll No : {{current_user.roll_no}}</h5>
+    <h4 class="inline">Topic : {{topic}}</h4>    
+</div>             
+{% endblock %}
+
+{% block form_attibute %}
+{{ wtf.form_field(form.vote)}}
+{{ wtf.form_field(form.remarks)}}
+{{ wtf.form_field(form.submit, class_='form-control btn btn-primary') }}
+{% endblock %}

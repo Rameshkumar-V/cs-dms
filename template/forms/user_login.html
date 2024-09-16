@@ -1,0 +1,8 @@
+{% extends "tools/orm_form.html" %}
+
+{% block form_attibute %}
+{{ wtf.form_field(form.roll_no) }}
+{{ wtf.form_field(form.dob) }}
+{{ wtf.form_field(form.category) }}
+{{ wtf.form_field(form.submit, class_='form-control btn btn-primary') }}
+{% endblock %}
