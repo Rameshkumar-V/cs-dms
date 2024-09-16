@@ -5,5 +5,6 @@ Flask-Admin
 Flask-Sqlalchemy
 Flask-bootstrap
 Flask-WTF
+wtforms_sqlalchemy
 
 
