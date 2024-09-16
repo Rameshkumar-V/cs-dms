@@ -4,5 +4,6 @@ Flask-Login
 Flask-Admin
 Flask-Sqlalchemy
 Flask-bootstrap
+Flask-Wtform
 
 
